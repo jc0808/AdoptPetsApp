@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(214, 130, 61);
+  padding: 10px;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .home {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+} */
+
+.headerBox {
+  width: 1000px;
+  height: 40px;
+  border: solid 2px;
+  margin: auto;
+}
+
+.headerBox .links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.headerBox .links .link {
+  text-decoration: none;
+
+
+}
+
+.headerBox .links .link.active {
+  color: peachpuff;
+}
+
+
+
+/* Container with the current Pets */
+.container {
+  border: solid 3px;
+  border-radius: 25px;
+  text-align: center;
+  width: 800px;
+  height: 500px;
+  padding: 10px;
+  /* margin-inline: 500px; */
+  margin: auto;
+
+  margin-top: 200px;
+}
+
+.container .boxDisplay {
+  border: solid 2px;
+  border-radius: 25px;
+  width: 500px;
+  display: inline-block;
+  padding: 5px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.container .rows {
+  overflow-y: scroll;
+  height: 250px;
+  display: grid;
+}
+
+.container .card {
+  border: dotted 3px;
+  font-size: 25px;
+  padding: 4px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+  height: 48px;
+  justify-content: space-between;
+}
+
+.container .card img {
+  border: solid 1px;
+  padding: 3px;
+}
+
+.container .card .info {
+  font-size: 29px;
+  color: rgb(87, 1, 87);
+  margin-top: 5px;
+}
+
+.container .card .giveUpButton {
+  color: rgb(163, 17, 17);
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+
+/* welcome message */
+
+.welcomeMessage {
+  text-align: center;
+  font-size: 40px;
+}
+
+/* pets container */
+
+
+.petsContainer {
+  display: flex;
+  border: dotted 3px;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.petsContainer .cardPet {
+  border: solid 2px;
+  width: 200px;
+  height: 229px;
+  padding: 6px;
+  border-radius: 20px;
+}
+
+.petsContainer .cardPet .image_card {
+  border: solid 4px;
+  padding: 4px;
+  border-radius: 20px;
+  text-align: center;
+  /* background-color:; */
+}
+
+.petsContainer .cardPet .image_card img {
+  max-width: 100%;
+  height: 100px;
+
+}
+
+.petsContainer .cardPet label {
+  font-size: large;
+  display: flex;
+  padding: 2px;
+}
+
+.petsContainer .cardPet .adopt {
+  text-align: center;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.petsContainer .cardPet .adopt button {
+  color: purple;
+  background-color: rgb(96, 182, 210);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.adopt .adopted {
+  border: solid 3px;
+  width: fit-content;
+  padding: 2px;
+  background-color: darkcyan;
+}
+
+.adopt .adopted label {
+  color: greenyellow;
+}
+
+
+.adoptPage h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.adoptPage .subtitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding: 10px;
+
+}
+
+/* Profile */
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.containerProfile {
+  border: solid 2px;
+  width: 35%;
+  height: 200px;
+
+}
+
+.containerProfile .userInfo label {
+  display: flex;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.containerProfile .userInfo .deleteAccount {
+
+  text-align: center;
+  margin-top: 5%;
+  padding: 5px;
+
+}
+
+.containerProfile .userInfo .deleteAccount button {
+  background-color: red;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* login */
+
+.credentialsPage {
+  display: flex;
+  justify-content: center;
+  position: static;
+  margin: 15%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginBox {
+  border: solid 2px;
+  width: 430px;
+  height: 430px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+
+}
+
+.signUpBox {
+  border: solid 2px;
+  width: 400px;
+  height: 480px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.resetPasswordBox {
+  border: solid 2px;
+  width: 400px;
+  height: 480px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.signUpBox .goBackButton {
+  float: left;
+  font-size: 15px;
+  color: blue;
+  cursor: pointer;
+
+}
+
+.boxCredentials h3 {
+  font-size: 20px;
+}
+
+.form {
+  text-align: center;
+  margin: 10%;
+  display: inline-block;
+
+}
+
+.form #username,
+#password,
+#firstname,
+#lastname,
+#address,
+#confirmPassword {
+  border-radius: 20px;
+  padding: 10px;
+  color: purple;
+}
+
+.form .loginButton {
+  margin-top: 20px;
+}
+
+.form .loginButton button {
+  font-size: 19px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.form .loginButton button:hover {
+  color: blueviolet;
+  border-color: rgb(153, 79, 221);
+}
+
+
+.boxCredentials .lowerBox div {
+  padding: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boxCredentials .lowerBox div:hover {
+  color: purple;
 }
